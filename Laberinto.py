@@ -99,7 +99,7 @@ def alforitmo_dfs(laberinto,start,end):
             #mostrar_puzzle(nodo_hijo)
             nodo_frontera.push(nodo_hijo)
 
-if __name__ == '__main__':
+def run_laberinto():
     # Posición de inicio y salida
     start = (0, 1)  # Coordenadas (fila, columna) de inicio
     end = (3, 4)    # Coordenadas (fila, columna) de salida
@@ -111,4 +111,8 @@ if __name__ == '__main__':
     else:
         print("Modificar valores de star y end")
     #print(alforitmo_dfs(puzzle))
-    
+
+
+
+if __name__ == '__main__':
+    run_laberinto()        

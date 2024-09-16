@@ -74,13 +74,14 @@ def alforitmo_dfs(puzzle):
             nodo_frontera.push(nodo_hijo)
         
         
-        
-
-if __name__ == '__main__':
+def run_puzzle():
     puzzle = crear_puzzle()
     mostrar_puzzle(puzzle)
     print(alforitmo_dfs(puzzle))
     
+
+if __name__ == '__main__':
+    run_puzzle()
     
     #nodo_hijo  = mov_centro(puzzle)
     #mostrar_puzzle(nodo_hijo)
