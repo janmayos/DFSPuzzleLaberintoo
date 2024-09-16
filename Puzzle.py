@@ -50,13 +50,14 @@ def alforitmo_dfs(puzzle):
         nodo_actual = nodo_frontera.pop()
         #print(nodo_actual)
         #print(nodos_visitados)
+        nodos_visitados.push(nodo_actual)
+
         if nodo_actual == [1,2,3,4]:
             nodos_visitados.imprimir_lista()
             return "Ya esta solucionado"
         
-        nodos_visitados.push(nodo_actual)
-        nodo_hijo = mov_derecha(nodo_actual)
         
+        nodo_hijo = mov_derecha(nodo_actual)
         
         if not nodos_visitados.existe_elemento(nodo_hijo) and not nodo_frontera.existe_elemento(nodo_hijo):
             #mostrar_puzzle(nodo_hijo)
