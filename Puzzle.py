@@ -6,8 +6,8 @@ def mostrar_puzzle(puzzle):
     print(puzzle)
 
 def crear_puzzle():
-    #puzzle = [1,3,2,4]
-    puzzle = [2,1,3,4]
+    puzzle = [1,3,2,4]
+    #puzzle = [2,1,3,4]
     return puzzle
 
 def mov_derecha(puzzle):
@@ -48,7 +48,6 @@ def alforitmo_dfs(puzzle):
 
     while not nodo_frontera.estaVacia():
         nodo_actual = nodo_frontera.pop()
-       
         #print(nodo_actual)
         #print(nodos_visitados)
         if nodo_actual == [1,2,3,4]:
@@ -62,11 +61,12 @@ def alforitmo_dfs(puzzle):
         if not nodos_visitados.existe_elemento(nodo_hijo) and not nodo_frontera.existe_elemento(nodo_hijo):
             #mostrar_puzzle(nodo_hijo)
             nodo_frontera.push(nodo_hijo)
-        
+        del(nodo_hijo)
         nodo_hijo = mov_centro(nodo_actual)
         if  not nodos_visitados.existe_elemento(nodo_hijo) and not nodo_frontera.existe_elemento(nodo_hijo):
             #mostrar_puzzle(nodo_hijo)
             nodo_frontera.push(nodo_hijo)
+        del(nodo_hijo)
         nodo_hijo = mov_izquierda(nodo_actual)
         if not nodos_visitados.existe_elemento(nodo_hijo) and not nodo_frontera.existe_elemento(nodo_hijo): 
             #mostrar_puzzle(nodo_hijo)
